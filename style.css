@@ -4,8 +4,8 @@
   --border: #2a2e35;
   --text: #e8eaed;
   --text-muted: #9aa0a8;
-  --accent: #5b8cff;
-  --accent-soft: rgba(91, 140, 255, 0.12);
+  --accent: #4ade80;
+  --accent-soft: rgba(74, 222, 128, 0.12);
   --radius: 14px;
   --max-width: 880px;
 }
@@ -100,9 +100,12 @@ h1 {
 }
 
 h2 {
+  display: inline-block;
   font-size: 1.4rem;
   margin: 48px 0 16px;
   letter-spacing: -0.005em;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent);
 }
 
 h3 {
@@ -150,17 +153,27 @@ p {
   margin: 24px 0;
 }
 
-.card-grid .card {
+.card-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.card-grid .card,
+.card-grid-2 .card {
   margin: 0;
   padding: 20px;
 }
 
-.card-grid .card h3 {
+.card-grid .card h3,
+.card-grid-2 .card h3 {
   margin-top: 0;
   font-size: 1rem;
 }
 
-.card-grid .card p {
+.card-grid .card p,
+.card-grid-2 .card p {
   margin-bottom: 0;
   font-size: 0.92rem;
 }
@@ -170,7 +183,7 @@ p {
   align-items: center;
   gap: 8px;
   background: var(--accent);
-  color: #fff;
+  color: var(--bg);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
@@ -286,5 +299,8 @@ footer.site-footer a:hover {
   }
   footer.site-footer a {
     margin: 0 8px;
+  }
+  .card-grid-2 {
+    grid-template-columns: 1fr;
   }
 }
