@@ -129,6 +129,20 @@ p {
   margin: 20px 0;
 }
 
+.form-embed {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.form-embed iframe {
+  display: block;
+  width: 100%;
+  border: none;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
