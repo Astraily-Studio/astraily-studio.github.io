@@ -56,11 +56,14 @@ header.site-header .wrap {
 }
 
 .brand .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 12px var(--accent);
+  color: var(--accent);
+  font-size: 15px;
+  line-height: 1;
+  text-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
+}
+
+.brand .dot::before {
+  content: "\2726";
 }
 
 nav.site-nav {
